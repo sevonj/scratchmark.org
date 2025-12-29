@@ -1,0 +1,17 @@
+  background: repeating-linear-gradient(
+      #222226 0,
+      #222226 1.8rem,
+      #2e2e32 1.8rem,
+      #2e2e32 2rem
+    );
+
+
+  .spacer {
+    height: 6rem;
+    box-sizing: border-box;
+    padding: 1rem;
+    transition: 0.5s;
+  }
+  .spacer:hover {
+    height: 8rem;
+  }
