@@ -84,6 +84,8 @@ html {
       #icon {
         max-width: var(--title-icon-size);
         max-height: var(--title-icon-size);
+        min-width: var(--title-icon-size);
+        min-height: var(--title-icon-size);
         filter: drop-shadow(0px 1px 0.5rem #0003);
       }
     }
@@ -114,9 +116,22 @@ html {
           max-height: 100%;
         }
 
-        .screenshot-margin-cancel {
-          margin-left: -3rem;
-          margin-right: -3rem;
+        .screenshot-row {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          padding: 1.5rem 0;
+          gap: 0.2rem;
+
+          .screenshot {
+            margin-left: -0.2rem;
+            margin-right: -0.2rem;
+          }
+        }
+
+        .screenshot {
+          margin-left: -1rem;
+          margin-right: -1rem;
         }
       }
     }
@@ -212,6 +227,15 @@ html {
   }
 }
 
+.markdown-mark {
+  display: inline;
+  filter: opacity(80%);
+  height: 1em;
+  @media (prefers-color-scheme: dark) {
+    filter: invert();
+  }
+}
+
 #page {
   max-width: var(--content-width);
   margin: auto;
@@ -229,7 +253,8 @@ html {
   #page-main {
     padding-top: 4rem;
 
-    background-image: url("assets/page-corner.png");
+    background-image: url("assets/page-corner.svg");
+    background-size: 128px;
     background-repeat: no-repeat;
     background-position: 100% 0;
 
