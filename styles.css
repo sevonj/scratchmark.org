@@ -165,7 +165,10 @@ html {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 3rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 3rem;
+        row-gap: 1rem;
       }
 
       a {
