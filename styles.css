@@ -181,22 +181,18 @@ html {
     @media (prefers-color-scheme: light) {
       .download-banner {
         background: #ccdef9;
-        background: linear-gradient(
-          90deg,
-          #23928b 0%,
-          rgba(142, 171, 230, 1) 100%
-        );
+        background: linear-gradient(90deg,
+            #23928b 0%,
+            rgba(142, 171, 230, 1) 100%);
       }
     }
 
     @media (prefers-color-scheme: dark) {
       .download-banner {
         background: #171d25;
-        background: linear-gradient(
-          90deg,
-          rgba(27, 40, 56, 1) 0%,
-          #205c58 100%
-        );
+        background: linear-gradient(90deg,
+            rgba(27, 40, 56, 1) 0%,
+            #205c58 100%);
       }
     }
   }
@@ -234,9 +230,24 @@ html {
   display: inline;
   filter: opacity(80%);
   height: 1em;
+
   @media (prefers-color-scheme: dark) {
     filter: invert();
   }
+}
+
+#git-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 3rem;
+  margin: 0.5rem;
+  transition: 0.1s;
+  opacity: 50%;
+}
+
+#git-corner:hover {
+  opacity: 80%;
 }
 
 #page {
@@ -264,18 +275,23 @@ html {
     #pagestack1 {
       background: var(--page-stack-1);
     }
+
     #pagestack2 {
       background: var(--page-stack-2);
     }
+
     #pagestack3 {
       background: var(--page-stack-3);
     }
+
     #pagestack4 {
       background: var(--page-stack-4);
     }
+
     #pagestack5 {
       background: var(--page-bg-color);
     }
+
     .pagestack {
       min-height: var(--page-thickness);
       border-radius: 0 0 3rem 0;
@@ -293,39 +309,44 @@ html {
     flex-direction: column;
 
     background: #cb4900;
-    background: linear-gradient(
-      90deg,
-      rgba(203, 73, 0, 1) 0%,
-      rgba(255, 166, 99, 1) 20%,
-      rgba(203, 73, 0, 1) 50%
-    );
+    background: linear-gradient(90deg,
+        rgba(203, 73, 0, 1) 0%,
+        rgba(255, 166, 99, 1) 20%,
+        rgba(203, 73, 0, 1) 50%);
 
     #orangetab1 {
       background: var(--orange-1);
     }
+
     #orangetab2 {
       background: var(--orange-2);
     }
+
     #orangetab3 {
       background: var(--orange-3);
     }
+
     #orangetab4 {
       background: var(--orange-4);
     }
+
     .orangetab {
       flex-grow: 1;
       border-radius: 1rem 0 0 1rem;
       display: flex;
       flex-direction: column;
     }
+
     .spacer {
       height: 6rem;
       box-sizing: border-box;
       padding: 1rem;
     }
+
     .end-spacer {
       flex-grow: 1;
     }
+
     .bottom {
       height: var(--page-thickness);
       box-sizing: border-box;
